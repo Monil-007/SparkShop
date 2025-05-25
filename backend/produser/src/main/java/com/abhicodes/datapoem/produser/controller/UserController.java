@@ -83,14 +83,11 @@ public class UserController {
         System.out.println("cartid: "+cart.getId());
 
         System.out.println("before update:"+cart.getWallet_balance());
-        long temp = 0;
-        if(cart.getWallet_balance()>0){
-            temp = temp + cart.getWallet_balance()+Long.parseLong(str);
-        }
-        else{
-            temp=cart.getWallet_balance();
-        }
-        cart.setWallet_balance(temp);
+        long currentBalance = cart.getWallet_balance();
+        long amountToAdd = Long.parseLong(str);
+        long newBalance = currentBalance + amountToAdd;
+        
+        cart.setWallet_balance(newBalance);
         System.out.println("after update: "+cart.getWallet_balance());
         cartRepository.save(cart);
 

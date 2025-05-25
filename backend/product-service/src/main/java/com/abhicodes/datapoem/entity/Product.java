@@ -32,7 +32,7 @@ public class Product {
 	private String productName;
 	@Column(name="price")
 	private int productPrice;
-	@Column(name="desc")
+	@Column(name="description")
 	private String productDesc;
 	@Column(name="mfg_date")
 	private String productMfgDate;

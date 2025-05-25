@@ -18,8 +18,12 @@ public class ProductController {
     @GetMapping("/products")
     public List<Product> displayAll(){
         temp = prodService.displayAllProducts();
-        System.out.println(temp.get(1).toString());
-        return prodService.displayAllProducts();
+        if (!temp.isEmpty()) {
+            System.out.println("First product: " + temp.get(0).toString());
+        } else {
+            System.out.println("No products found in the database");
+        }
+        return temp;
     }
 
     @PostMapping("/{id}")
