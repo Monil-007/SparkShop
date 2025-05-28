@@ -1,9 +1,9 @@
-# ecommerce-webapp
-A simple shopping e commerce app using spring boot, mysql and react js
+# RK Shop 18 - E-commerce Application
+A modern e-commerce application built with Spring Boot, MySQL, and React.js
 
 ## Instructions to use
-* First clone the repository using gitbash <br>
-  <code>git clone https://github/01abhishek10/ecommerce-webapp.git</code>
+* Clone the repository using git <br>
+  <code>git clone [YOUR_GITHUB_REPO_URL]</code>
 * Navigate to the frontend folder and install the dependencies using the below command <br/>
   <code>npm install </code>
 * Create a database stock_db and give the mysql username and password in application.properties file in both microservices <br/>
